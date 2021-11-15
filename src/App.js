@@ -1,11 +1,12 @@
-import Books from "./components/books";
-import Categories from "./components/categories";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
-
+import {
+  BrowserRouter as Router, Switch, Route, Link,
+} from 'react-router-dom';
+import Books from './components/books';
+import Categories from './components/categories';
 
 function App() {
   return (
-      <Router>
+    <Router>
       <div>
         <Link to="/">Books</Link>
       </div>
