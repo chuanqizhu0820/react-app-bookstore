@@ -1,3 +1,5 @@
+import './books.css';
+
 const bookArr = [
   {
     id: 1,
@@ -29,7 +31,7 @@ function Books() {
       </form>
       <ul>
         {bookArr.map(((item) => (
-          <div key={item.id}>
+          <div key={item.id} className="book-item">
             <li>{`${item.title}, ${item.author}, ${item.year}`}</li>
             <button type="button">delete</button>
           </div>

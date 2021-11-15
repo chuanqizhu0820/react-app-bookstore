@@ -3,15 +3,18 @@ import {
 } from 'react-router-dom';
 import Books from './components/books';
 import Categories from './components/categories';
+import './App.css';
 
 function App() {
   return (
     <Router>
-      <div>
-        <Link to="/">Books</Link>
-      </div>
-      <div>
-        <Link to="/categories">Categories</Link>
+      <div id="navlinks">
+        <div className="nav-link">
+          <Link to="/">Books</Link>
+        </div>
+        <div className="nav-link">
+          <Link to="/categories">Categories</Link>
+        </div>
       </div>
 
       <Switch>
