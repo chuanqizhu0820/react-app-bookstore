@@ -3,8 +3,11 @@ import ReactDOM from 'react-dom';
 import {
   BrowserRouter as Router, Switch, Route, Link,
 } from 'react-router-dom';
+import { Provider } from 'react-redux';
+import store from './redux/configureStore';
 import Books from './components/books';
 import Categories from './components/categories';
+
 import './index.css';
 
 function App() {
@@ -32,8 +35,8 @@ function App() {
 }
 
 ReactDOM.render(
-  <React.StrictMode>
+  <Provider store={store}>
     <App />
-  </React.StrictMode>,
+  </Provider>,
   document.getElementById('root'),
 );
