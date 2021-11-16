@@ -11,33 +11,34 @@ function Books() {
   return (
     <>
       <h1>Book List</h1>
-      <form onSubmit={(e) => {
-        e.preventDefault();
-        const newBook = {
-          id: uuid.v4(),
-          title: e.target.title.value,
-          author: e.target.author.value,
-          year: e.target.year.value,
-        };
-        dispatch(addBook(newBook));
-      }}
+      <form
+        id="myForm"
+        onSubmit={(e) => {
+          e.preventDefault();
+          const newBook = {
+            id: uuid.v4(),
+            title: e.target.title.value,
+            author: e.target.author.value,
+            year: e.target.year.value,
+          };
+          dispatch(addBook(newBook));
+          document.getElementById('myForm').reset();
+        }}
       >
-        {/* eslint-disable */}
-        <label>
+        <label htmlFor="title">
           Title:
-          <input type="text" name="title" />
+          <input type="text" name="title" required />
         </label>
-        <label>
+        <label htmlFor="author">
           Author:
-          <input type="text" name="author" />
+          <input type="text" name="author" required />
         </label>
-        <label>
+        <label htmlFor="year">
           Year:
-          <input type="text" name="year" />
+          <input type="text" name="year" required />
         </label>
         <input type="submit" value="Add Book" />
       </form>
-      {/* eslint-enable */}
       <ul>
         {bookArr.map(((item) => (
           <div key={item.id} className="book-item">
