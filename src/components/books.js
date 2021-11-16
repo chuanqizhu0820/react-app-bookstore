@@ -19,7 +19,6 @@ function Books() {
           author: e.target.author.value,
           year: e.target.year.value,
         };
-        console.log(newBook.id);
         dispatch(addBook(newBook));
       }}
       >
