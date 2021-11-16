@@ -22,11 +22,22 @@ function Books() {
         dispatch(addBook(newBook));
       }}
       >
-        <input type="text" name="title" />
-        <input type="text" name="author" />
-        <input type="text" name="year" />
+        {/* eslint-disable */}
+        <label>
+          Title:
+          <input type="text" name="title" />
+        </label>
+        <label>
+          Author:
+          <input type="text" name="author" />
+        </label>
+        <label>
+          Year:
+          <input type="text" name="year" />
+        </label>
         <input type="submit" value="Add Book" />
       </form>
+      {/* eslint-enable */}
       <ul>
         {bookArr.map(((item) => (
           <div key={item.id} className="book-item">
