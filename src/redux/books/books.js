@@ -1,10 +1,11 @@
-export const initialState = [];
-
+const baseId = 'https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps';
 const appId = 'uMZpDiBI8HUR43rKW9ot';
+
+export const initialState = [];
 
 export const addBook = (payload) => (dispatch) => {
   dispatch({ type: 'ADD_BOOK', payload });
-  fetch(`https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/${appId}/books`,
+  fetch(`${baseId}/${appId}/books`,
     {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
@@ -16,7 +17,7 @@ export const addBook = (payload) => (dispatch) => {
 export const removeBook = (payload) => (dispatch) => {
   dispatch({ type: 'REMOVE_BOOK', payload });
   const itemId = payload.item_id;
-  fetch(`https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/${appId}/books/${itemId}`,
+  fetch(`${baseId}/${appId}/books/${itemId}`,
     {
       method: 'DELETE',
     })
@@ -29,7 +30,6 @@ const reducer = (state = initialState, action) => {
       return [...state, action.payload];
     case 'REMOVE_BOOK':
       return state.filter((item) => item.item_id !== action.payload.item_id);
-
     default:
       return state;
   }
