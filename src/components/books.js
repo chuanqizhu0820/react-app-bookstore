@@ -16,10 +16,9 @@ function Books() {
         onSubmit={(e) => {
           e.preventDefault();
           const newBook = {
-            id: uuid.v4(),
+            item_id: uuid.v4(),
             title: e.target.title.value,
-            author: e.target.author.value,
-            year: e.target.year.value,
+            category: e.target.category.value,
           };
           dispatch(addBook(newBook));
           document.getElementById('myForm').reset();
@@ -29,21 +28,17 @@ function Books() {
           Title:
           <input type="text" name="title" required />
         </label>
-        <label htmlFor="author">
-          Author:
-          <input type="text" name="author" required />
-        </label>
         <label htmlFor="year">
-          Year:
-          <input type="text" name="year" required />
+          Category:
+          <input type="text" name="category" required />
         </label>
         <input type="submit" value="Add Book" />
       </form>
       <ul>
         {bookArr.map(((item) => (
-          <div key={item.id} className="book-item">
-            <li>{`${item.title}, ${item.author}, ${item.year}`}</li>
-            <button type="button" className={item.id} onClick={(e) => dispatch(removeBook({ id: e.target.className }))}>delete</button>
+          <div key={item.item_id} className="book-item">
+            <li>{`${item.title}, ${item.category}`}</li>
+            <button type="button" className={item.item_id} onClick={(e) => dispatch(removeBook({ item_id: e.target.className }))}>delete</button>
           </div>
         )))}
       </ul>
