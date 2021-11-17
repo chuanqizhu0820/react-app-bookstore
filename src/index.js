@@ -13,14 +13,14 @@ import './index.css';
 function App() {
   return (
     <Router>
-      <div id="navlinks">
+      <nav id="navlinks">
         <div className="nav-link">
           <Link to="/">Books</Link>
         </div>
         <div className="nav-link">
           <Link to="/categories">Categories</Link>
         </div>
-      </div>
+      </nav>
 
       <Switch>
         <Route exact path="/">
