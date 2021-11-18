@@ -114,8 +114,9 @@
   line-height: normal;
   letter-spacing: normal; */
   color: #121212;
-  margin-left: 10rem;
+  padding-left: 10rem;
   margin-right: 10rem;
+  border-left: 0.5px solid rgb(209, 208, 208);
 }
 
 .chaper-number{

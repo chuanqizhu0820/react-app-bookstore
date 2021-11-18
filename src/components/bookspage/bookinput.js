@@ -7,6 +7,7 @@ const uuid = require('uuid');
 export default function BookInput(){
   const dispatch = useDispatch();
   return(
+    <div id="book-input-container">
         <form
         id="myForm"
         onSubmit={(e) => {
@@ -25,5 +26,6 @@ export default function BookInput(){
         <input type="text" name="category" placeholder="Category" id="category-input" required />
         <input type="submit" value="ADD BOOK" id="add-book-btn" />
       </form>
+      </div>
   )
 }
