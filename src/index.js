@@ -8,17 +8,20 @@ import store from './redux/configureStore';
 import Books from './components/books';
 import Categories from './components/categories';
 
-import './index.css';
+import './css/index.css';
 
 function App() {
   return (
     <Router>
-      <nav id="navlinks">
-        <div className="nav-link">
-          <Link to="/">Books</Link>
+      <nav id="NavItems">
+        <div className="Bookstore-CMS">
+          Bookstore CMS
         </div>
-        <div className="nav-link">
-          <Link to="/categories">Categories</Link>
+        <div className="BOOKS">
+          <Link to="/">BOOKS</Link>
+        </div>
+        <div className="CATEGORIES">
+          <Link to="/categories">CATEGORIES</Link>
         </div>
       </nav>
 
