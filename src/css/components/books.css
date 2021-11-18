@@ -1,3 +1,11 @@
+main{
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+#bookpanel-section{
+  padding-top: 3rem;
+}
+
 .book-item {
   display: flex;
   flex-direction: row;
@@ -6,4 +14,10 @@
 
 .book-item button {
   margin-left: 10px;
+}
+
+#panel-input-hr{
+  width: 75rem;
+  margin: 0;
+  border: solid 1px grey;
 }

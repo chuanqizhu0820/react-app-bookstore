@@ -8,14 +8,17 @@ import '../css/components/books.css';
 function Books() {
   const bookArr = useSelector((state) => state.booksReducer);
   return (
-    <>
-      <ul>
+    <main>
+      <section id="bookpanel-section">
         {bookArr.map(((item) => (
-          <BookPanel item={item} />
+        <BookPanel item={item} />
         )))}
-      </ul>
-      <BookInput />
-    </>
+      </section>
+      <hr id="panel-input-hr" />
+      <section>
+        <BookInput />
+      </section>
+    </main>
   );
 }
 
