@@ -3,12 +3,12 @@ import { addBook } from '../../redux/books/books';
 import '../../css/components/bookspage/bookinput.css';
 
 const uuid = require('uuid');
-/* eslint-disable */
-export default function BookInput(){
+
+export default function BookInput() {
   const dispatch = useDispatch();
-  return(
+  return (
     <div id="book-input-container">
-        <form
+      <form
         id="myForm"
         onSubmit={(e) => {
           e.preventDefault();
@@ -26,6 +26,6 @@ export default function BookInput(){
         <input type="text" name="category" placeholder="Category" id="category-input" required />
         <input type="submit" value="ADD BOOK" id="add-book-btn" />
       </form>
-      </div>
-  )
+    </div>
+  );
 }

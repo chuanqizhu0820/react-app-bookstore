@@ -1,8 +1,8 @@
-#root{
+#root {
   background-color: rgba(0, 0, 0, 0.05);
 }
 
-header{
+header {
   background-color: white;
   height: 5rem;
 }
@@ -11,8 +11,6 @@ header{
   width: 15rem;
   height: 2.313rem;
   margin-left: 6.25rem;
-  /* margin: 0.375rem 2.938rem 0.125rem 0; */
-  font-family: Montserrat;
   font-size: 1.875rem;
   font-weight: bold;
   font-stretch: normal;
@@ -28,13 +26,12 @@ header{
   font-size: 0.813rem;
 }
 
-.BOOKS a{
+.BOOKS a {
   text-decoration: none;
   color: #121212;
-
 }
 
-.CATEGORIES a{
+.CATEGORIES a {
   text-decoration: none;
   color: #636161;
 }
@@ -51,16 +48,14 @@ header{
   padding-top: 1rem;
 }
 
-#avatar-div{
+#avatar-div {
   margin-left: auto;
   margin-right: 6.25rem;
 }
 
-#avatar{
+#avatar {
   width: 40%;
   padding: 6px;
   border-radius: 50px;
   border: 1px solid rgb(206, 205, 205);
 }
-
-

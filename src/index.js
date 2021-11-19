@@ -15,7 +15,6 @@ import './css/index.css';
 function App() {
   const dispatch = useDispatch();
   dispatch(loadBook());
-  console.log('the app comp is runing');
   return (
     <Router>
       <header>
