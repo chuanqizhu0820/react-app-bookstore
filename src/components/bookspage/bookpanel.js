@@ -25,7 +25,7 @@ export default function BookPanel(props) {
        <CircularProgressbar value={66} />
        </div>
        <div className="completeness-text">
-        <p className="completeness-num">100%</p>
+        <p className="completeness-num">66%</p>
         <p className="completeness-txt">Completed</p>
        </div>
       </div>

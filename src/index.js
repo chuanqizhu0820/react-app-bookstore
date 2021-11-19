@@ -3,7 +3,8 @@ import ReactDOM from 'react-dom';
 import {
   BrowserRouter as Router, Switch, Route, Link,
 } from 'react-router-dom';
-import { Provider } from 'react-redux';
+import { useDispatch, Provider } from 'react-redux';
+import { loadBook } from './redux/books/books';
 import user from './icons8-user-50.png';
 import store from './redux/configureStore';
 import Books from './components/books';
@@ -12,6 +13,9 @@ import Categories from './components/categories';
 import './css/index.css';
 
 function App() {
+  const dispatch = useDispatch();
+  dispatch(loadBook());
+  console.log('the app comp is runing');
   return (
     <Router>
       <header>

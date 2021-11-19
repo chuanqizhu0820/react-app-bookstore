@@ -24,12 +24,28 @@ export const removeBook = (payload) => (dispatch) => {
     .then((response) => response.json());
 };
 
+export const loadBook = () => (dispatch) => {
+  fetch(`${baseId}/${appId}/books`)
+    .then((response) => response.json())
+    .then((data) => {
+      const valueArr = Object.values(data).flat();
+      const keyArr = Object.keys(data);
+      const objArr = valueArr.map((item, idx) => {
+        const obj = { item_id: keyArr[idx] };
+        return { ...obj, ...item };
+      });
+      dispatch({ type: 'LOAD_BOOK', payload: objArr });
+    });
+};
+
 const reducer = (state = initialState, action) => {
   switch (action.type) {
     case 'ADD_BOOK':
       return [...state, action.payload];
     case 'REMOVE_BOOK':
       return state.filter((item) => item.item_id !== action.payload.item_id);
+    case 'LOAD_BOOK':
+      return [...action.payload];
     default:
       return state;
   }

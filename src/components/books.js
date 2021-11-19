@@ -1,11 +1,11 @@
 import { useSelector } from 'react-redux';
 import BookPanel from './bookspage/bookpanel';
 import BookInput from './bookspage/bookinput';
-
 import '../css/components/books.css';
 
 /* eslint-disable */
 function Books() {
+  console.log("the books comp is runing")
   const bookArr = useSelector((state) => state.booksReducer);
   return (
     <main>
