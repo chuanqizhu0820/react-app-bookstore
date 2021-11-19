@@ -1,17 +1,53 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import {
+  BrowserRouter as Router, Switch, Route, Link,
+} from 'react-router-dom';
+import { useDispatch, Provider } from 'react-redux';
+import { loadBook } from './redux/books/books';
+import user from './icons8-user-50.png';
+import store from './redux/configureStore';
+import Books from './components/books';
+import Categories from './components/categories';
+
+import './css/index.css';
+
+function App() {
+  const dispatch = useDispatch();
+  dispatch(loadBook());
+  return (
+    <Router>
+      <header>
+        <nav id="NavItems">
+          <div className="Bookstore-CMS">
+            Bookstore CMS
+          </div>
+          <div className="BOOKS">
+            <Link to="/">BOOKS</Link>
+          </div>
+          <div className="CATEGORIES">
+            <Link to="/categories">CATEGORIES</Link>
+          </div>
+          <div id="avatar-div">
+            <img src={user} alt="user pic" id="avatar" />
+          </div>
+        </nav>
+      </header>
+      <Switch>
+        <Route exact path="/">
+          <Books />
+        </Route>
+        <Route path="/categories">
+          <Categories />
+        </Route>
+      </Switch>
+    </Router>
+  );
+}
 
 ReactDOM.render(
-  <React.StrictMode>
+  <Provider store={store}>
     <App />
-  </React.StrictMode>,
-  document.getElementById('root')
+  </Provider>,
+  document.getElementById('root'),
 );
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();

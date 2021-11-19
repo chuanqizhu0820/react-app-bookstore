@@ -1,0 +1,23 @@
+/* main{
+  background-color: rgba(0, 0, 0, 0.05);
+} */
+
+#bookpanel-section {
+  padding-top: 3rem;
+}
+
+.book-item {
+  display: flex;
+  flex-direction: row;
+  margin-top: 5px;
+}
+
+.book-item button {
+  margin-left: 10px;
+}
+
+#panel-input-hr {
+  width: 75rem;
+  margin-left: 6.25rem;
+  border: solid 1px rgb(194, 193, 193);
+}

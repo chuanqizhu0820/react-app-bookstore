@@ -1,0 +1,109 @@
+.book-panel {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 75rem;
+  height: 10.625rem;
+  background-color: white;
+  margin-left: 6.25rem;
+  margin-bottom: 1rem;
+}
+
+.book-info {
+  margin-left: 1.7rem;
+}
+
+.book-btn {
+  border: none;
+  color: #4386bf;
+  background-color: white;
+  margin-top: 1.5rem;
+  padding-right: 1rem;
+  padding-left: 1rem;
+  border-right: rgb(187, 186, 186) 1px solid;
+}
+
+.comment-btn {
+  padding-left: 0;
+}
+
+.edit-btn {
+  border-right: none;
+}
+
+.completeness {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.completeness-circle {
+  width: 4rem;
+  height: 4rem;
+  margin-right: 1rem;
+}
+
+.completeness-num {
+  font-size: 2rem;
+  color: #121212;
+  margin: 0;
+}
+
+.completeness-txt {
+  font-size: 0.875rem;
+  color: #121212;
+  margin: 0;
+  margin-left: 0.2rem;
+}
+
+.category-text {
+  width: 3.063rem;
+  height: 1.125rem;
+  opacity: 0.5;
+  font-size: 0.875rem;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #121212;
+}
+
+.title-text {
+  width: 12.313rem;
+  height: 1.813rem;
+  font-size: 1.375rem;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.2px;
+  color: #121212;
+}
+
+.author-text {
+  font-size: 0.875rem;
+  color: #4386bf;
+}
+
+.current-chapter {
+  font-size: 0.813rem;
+  color: #121212;
+  padding-left: 10rem;
+  margin-right: 10rem;
+  border-left: 0.5px solid rgb(209, 208, 208);
+}
+
+.chaper-number {
+  font-size: 1rem;
+  color: #121212;
+}
+
+.update-btn {
+  width: 10.5rem;
+  height: 2.813rem;
+  border: none;
+  color: white;
+  background-color: #0290ff;
+}
